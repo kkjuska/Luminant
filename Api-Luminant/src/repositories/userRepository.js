@@ -2,15 +2,15 @@ import { query } from "../config/db.js";
 
 export const userRepository = {
     async findByUsername(username){
-        const res = await query('SELECT * FROM usuario WHERE username = $1 AND is_active = TRUE', [username])
+        const res = await query('SELECT id, nome, username, email, avatar_url, bio, created_at, updated_at, is_active FROM usuario WHERE username = $1 AND is_active = TRUE', [username])
         return res.rows[0]
     },
     async findByEmail(email){
-        const res = await query('SELECT * FROM usuario WHERE email = $1 AND is_active = TRUE', [email])
+        const res = await query('SELECT id, nome, username, email, avatar_url, bio, created_at, updated_at, is_active FROM usuario WHERE email = $1 AND is_active = TRUE', [email])
         return res.rows[0]
     },
     async findById(id){
-        const res = await query('SELECT * FROM usuario WHERE id = $1 AND is_active = TRUE' , [id])
+        const res = await query('SELECT id, nome, username, email, avatar_url, bio, created_at, updated_at, is_active FROM usuario WHERE id = $1 AND is_active = TRUE' , [id])
         return res.rows[0]
     },
     async findByPublicId(id){
@@ -19,7 +19,7 @@ export const userRepository = {
     },
     async createUser(user){
         const { nome, username, email, password_hash} = user;
-        const sql = 'INSERT INTO usuario (nome, username, email, password_hash) values ($1, $2, $3, $4) returning *;';
+        const sql = 'INSERT INTO usuario (nome, username, email, password_hash) values ($1, $2, $3, $4) returning id, nome, username, email, avatar_url, bio, created_at, updated_at, is_active;';
         const res = await query(sql, [nome, username, email, password_hash]);
         return res.rows[0]
     },
