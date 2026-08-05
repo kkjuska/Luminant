@@ -44,7 +44,7 @@ export const userService = {
         return await userDesativado;
     },
     async login(reqUser){
-        const user = await userRepository.findByEmail(reqUser.email);
+        const user = await userRepository.findByEmailLogin(reqUser.email);
 
         if(!user){
             throw new Error("Email ou senha inválidos.");
@@ -58,6 +58,8 @@ export const userService = {
         if(!passwordMatch) {
             throw new Error("Email ou senha incorretos")
         }
+
+        delete user.password_hash;
 
         return user;
     }
