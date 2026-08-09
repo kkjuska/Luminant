@@ -1,5 +1,6 @@
 import { userRepository } from "../repositories/userRepository.js";
-import bcrypt, { hash } from "bcrypt";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 export const userService = {
     async getByUsername(username){
@@ -59,8 +60,20 @@ export const userService = {
             throw new Error("Email ou senha incorretos")
         }
 
+        
+        const token = jwt.sign(
+            {
+                id: user.id,
+                public_id: user.public_id
+            },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: "7d"
+            }
+        )
+        
         delete user.password_hash;
 
-        return user;
+        return { user, token }
     }
 }

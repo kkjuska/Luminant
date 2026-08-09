@@ -53,6 +53,12 @@ export const userController = {
     },
     async updateProfile(req, res){
         try {
+            if(req.user.id !== req.params.id){
+            return res.status(403).json(
+                {erro: "Voce nao pode alterar este usuario"}
+                )
+            }
+        
             const userAtualizado = await userService.updateProfile(req.params.id, req.body);
             res.status(200).json(userAtualizado);
         } catch (error) {

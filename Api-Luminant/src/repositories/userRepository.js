@@ -10,8 +10,8 @@ export const userRepository = {
         return res.rows[0]
     },
     async findByEmailLogin(email){
-        const res = await query('SELECT id, nome, username, email, password_hash from ususario WHERE email = $1 AND is_active = TRUE', [email])
-        return res.rows
+        const res = await query('SELECT id, nome, username, email, password_hash from usuario WHERE email = $1 AND is_active = TRUE', [email])
+        return res.rows[0]
     },
     async findById(id){
         const res = await query('SELECT id, nome, username, email, avatar_url, bio, created_at, updated_at, is_active FROM usuario WHERE id = $1 AND is_active = TRUE' , [id])
