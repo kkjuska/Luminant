@@ -25,4 +25,5 @@
 
 ## Design
 
-### https://www.figma.com/design/IHp4NyHhNoOwuqzkI6gFYn/luminant?node-id=0-1&t=IJkX3cw7ziGMsYz6-1
+### Link:
+https://www.figma.com/design/IHp4NyHhNoOwuqzkI6gFYn/luminant?node-id=0-1&t=IJkX3cw7ziGMsYz6-1
