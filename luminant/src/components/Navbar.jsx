@@ -53,6 +53,7 @@ function Navbar() {
         <div className="usuario-bottom">
           <div className="avatar-user">👤</div>
           <span className="nome-user">Nome</span>
+          <button><img src="./logout.png" alt="" /></button>
         </div>
       </div>
     </nav>

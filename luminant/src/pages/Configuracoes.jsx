@@ -23,7 +23,7 @@ function Configuracoes() {
                 <span className='campo-rotulo'>Username:</span>
                 <span className='campo-valor'>Nome</span>
               </div>
-              <button className='btn-editar'>✏️ editar</button>
+              <button className='btn-editar'><img src="lapis.png" alt="" /> editar</button>
             </div>
 
             <div className='config-campo-box'>
@@ -31,7 +31,7 @@ function Configuracoes() {
                 <span className='campo-rotulo'>Nome de exibição:</span>
                 <span className='campo-valor'>Nome</span>
               </div>
-              <button className='btn-editar'>✏️ editar</button>
+              <button className='btn-editar'><img src="lapis.png" alt="" /> editar</button>
             </div>
           </div>
 
@@ -60,12 +60,12 @@ function Configuracoes() {
 
             <div className='config-campo-box'>
               <span className='campo-valor-bold'>Troque sua senha</span>
-              <button className='btn-editar borda-amarela'>✏️ editar</button>
+              <button className='btn-editar borda-amarela'><img src="lapis.png" alt="" /> editar</button>
             </div>
 
             <div className='config-campo-box'>
               <span className='campo-valor-bold'>Troque seu email</span>
-              <button className='btn-editar borda-amarela'>✏️ editar</button>
+              <button className='btn-editar borda-amarela'><img src="lapis.png" alt="" /> editar</button>
             </div>
           </div>
         </section>

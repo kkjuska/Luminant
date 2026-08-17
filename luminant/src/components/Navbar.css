@@ -132,3 +132,11 @@
   font-size: 0.95rem;
   font-family: baloo, system-ui;
 }
+
+.usuario-bottom button{
+    background: none;
+    border: none;
+}
+.usuario-bottom img{
+    width: 1.5rem;
+}

@@ -43,10 +43,10 @@ function Home() {
             <p className='post-texto'>Olha esse video que eu fiz</p>
             <div className='media-box video-box'>VIDEO</div>
             <div className='post-acoes'>
-              <button className='btn-acao'>♡</button>
-              <button className='btn-acao'>💬</button>
-              <button className='btn-acao'>🔄</button>
-              <button className='btn-acao'>🔗</button>
+              <button className='btn-acao'><img src="./coracao.png" alt="" /></button>
+              <button className='btn-acao'><img src="./comentario.png" alt="" /></button>
+              <button className='btn-acao'><img src="./repost.png" alt="" /></button>
+              <button className='btn-acao'><img src="./link.png" alt="" /></button>
             </div>
           </article>
           <article className='card-post'>
