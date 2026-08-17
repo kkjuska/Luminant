@@ -1,14 +1,18 @@
 import { createBrowserRouter } from "react-router-dom"; 
 import Home from "../pages/Home";
-import Pagina1 from "../pages/Pagina1";
-import Pagina2 from "../pages/Pagina2";
-import Pagina3 from "../pages/Pagina3";
+import Buscar from "../pages/Buscar";
+import Perfil from "../pages/Perfil";
+import Comunidade from "../pages/Comunidade";
+import Configuracoes from "../pages/Configuracoes"
+import Dashboard from "../pages/dashboard";
 
 const router = createBrowserRouter([
     {path: "/", element: <Home />},
-    {path: "/pagina1", element: <Pagina1 />},
-    {path: "/pagina2", element: <Pagina2 />},
-    {path: "/pagina3", element: <Pagina3 />},
+    {path: "/buscar", element: <Buscar />},
+    {path: "/perfil", element: <Perfil />},
+    {path: "/comunidade", element: <Comunidade />},
+    {path: "/configuracoes", element: <Configuracoes/>},
+    {path: "/dashboard", element: <Dashboard />}
 ])
 
 export default router;
