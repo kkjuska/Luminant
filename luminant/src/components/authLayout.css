@@ -1,0 +1,49 @@
+.auth-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1b1e;
+  overflow: hidden;
+}
+
+.auth-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.auth-container.cadastro-active .auth-content {
+  left: 50%;
+}
+
+.auth-overlay-panel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: #27282d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: transform 0.6s ease-in-out;
+}
+
+.auth-container.cadastro-active .auth-overlay-panel {
+  transform: translateX(-100%);
+}
+
+.auth-content .login-box {
+  width: 100%;
+  min-width: 30vw; 
+  padding: 0 1rem;
+  box-sizing: border-box;
+}

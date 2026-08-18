@@ -165,70 +165,6 @@ body {
   margin-top: 1rem;
 }
 
-.cont-widgets {
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.cont-widgets::-webkit-scrollbar{
-    display: none;
-}
-
-.widget-grupo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.widget-titulo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.widget-titulo h2 {
-  font-size: 1.25rem;
-  font-weight: 800;
-}
-
-.barra-indicador {
-  width: 4px;
-  height: 20px;
-  border-radius: 2px;
-}
-
-.barra-indicador.amarelo { background-color: #eab308; }
-.barra-indicador.azul { background-color: #3b82f6; }
-.barra-indicador.verde { background-color: #22c55e; }
-
-.widget-lista {
-  padding-left: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  color: #e4e4e7;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.lista-editores {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.editor-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
 .divisor-linha {
   height: 1px;
   background-color: #27272a;
@@ -787,3 +723,206 @@ body {
   color: #71717a;
   font-size: 0.75rem;
 }
+
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1b1e;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.login-lado-esquerdo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #1a1b1e;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-login {
+  width: 100%;
+  background-color: #3f4147;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-login::placeholder {
+  color: #8e9297;
+}
+
+.input-login:focus {
+  background-color: #474a51;
+}
+
+.login-opcoes {
+  display: flex;
+  align-items: center;
+  margin-top: -0.2rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #8e9297;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.checkbox-container input[type="checkbox"] {
+  accent-color: #eab308;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.btn-entrar {
+  width: 100%;
+  background-color: #eab308;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.btn-entrar:hover {
+  opacity: 0.9;
+}
+
+.btn-entrar:active{
+  scale: 0.98;
+}
+
+.links-auxiliares {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -0.3rem;
+}
+
+.link-esqueceu-senha,
+.link-cadastro {
+  color: #71717a;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link-esqueceu-senha:hover,
+.link-cadastro:hover {
+  color: #eab308;
+  text-decoration: underline;
+}
+
+.login-divisor {
+  position: relative;
+  text-align: center;
+  margin: 1.2rem 0;
+}
+
+.login-divisor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #3f3f46;
+  z-index: 1;
+}
+
+.login-divisor span {
+  position: relative;
+  background-color: #1a1b1e;
+  padding: 0 0.8rem;
+  color: #71717a;
+  font-size: 0.8rem;
+  z-index: 2;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn-social {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-social:hover {
+  transform: translateY(-2px);
+}
+
+.btn-social.discord {
+  background-color: #ffffff;
+}
+
+.login-logo {
+  background-color: #2B2D31;
+  width: 50vw;
+}
+
+@media (max-width: 768px) {
+  .login-lado-direito {
+    display: none;
+  }
+}
+
+.cadastro-container {
+  flex-direction: row-reverse;
+}
+
+.login-lado-direito-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #1a1b1e;
+}
+
