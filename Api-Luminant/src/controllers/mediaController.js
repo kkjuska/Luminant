@@ -23,7 +23,7 @@ export const mediaController = {
     },
     async create(req, res){
         try {
-            const novoMedia = await mediaService.createMedia(req.body, req.post.id);
+            const novoMedia = await mediaService.createMedia(req.body, req.body.post_id, req.user.id);
             res.status(201).json(novoMedia)
         } catch (error) {
             res.status(400).json(
@@ -34,13 +34,14 @@ export const mediaController = {
     async delete(req, res){
         try {
             const media = await mediaService.getById(req.params.id);
+            
             if(!media){
                 return res.status(404).json(
                     {erro: "Media não encontrado!"}
                 )
             }
-            const mediaDeletado = await mediaService.deleteMedia(req.params.id);
-            res.status(200).json(media)
+            const mediaDeletado = await mediaService.deleteMedia(req.params.id, media.post_id, req.user.id);
+            res.status(200).json(mediaDeletado)
         } catch (error) {
             const status = error.message === "Media não encontrado" ? 404 : 400;
             res.status(status).json(
