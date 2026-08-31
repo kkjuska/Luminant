@@ -55,7 +55,7 @@ function Login() {
 
           <input
             type='text'
-            placeholder='Email ou nome'
+            placeholder='Email'
             value={emailOuNome}
             onChange={(e) => setEmailOuNome(e.target.value)}
             className='input-login'

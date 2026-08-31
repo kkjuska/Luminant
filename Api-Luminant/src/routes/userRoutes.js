@@ -9,7 +9,7 @@ router.get('/user/email/:email', authMiddleware, userController.getByEmail);
 router.get('/user/id/:id', authMiddleware, userController.getById);
 router.get('/user/public/:id', authMiddleware, userController.getByPublicId);
 router.post('/user', userController.create);
-router.post('/user/login', authMiddleware, userController.login)
+router.post('/user/login', userController.login)
 router.patch('/user/:id', userController.updateProfile);
 router.patch('/user/:id/password', userController.updatePassword);
 router.delete('/user/:id', userController.deactivate);
