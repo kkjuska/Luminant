@@ -17,6 +17,7 @@ export const commentRepository = {
         const { content } = comment
         const sql = 'INSERT INTO comments ( post_id, user_id, content ) values ( $1, $2, $3 ) returning *';
         const res = await query(sql, [postId, userId, content])
+        return res.rows[0]
     },
     async deleteComment(id){
         const sql = 'DELETE from comments WHERE id = $1 returning *';
