@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "node --watch src/server/server.js"
   },
-  "type": "module",
+  "": "module",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
